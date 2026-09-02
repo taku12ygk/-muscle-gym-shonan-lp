@@ -499,19 +499,23 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
   display: grid;
   gap: clamp(2rem, 4vw, 3rem);
   grid-template-columns: 1fr;
-  align-items: center;
+  align-items: start;
 }
 @media (min-width: 900px) {
   .access__grid { grid-template-columns: 1fr 1fr; }
 }
-.access__list { margin: 1.5rem 0 2rem; }
+.access__block { margin-top: 1.6rem; }
+.access__block:last-of-type { margin-bottom: 1.8rem; }
+.access__block-title { font-size: var(--fs-h3); margin-bottom: 0.6rem; }
+.access__list { margin: 0; }
 .access__list > div {
   display: flex;
   gap: 1rem;
   padding: 0.7em 0;
   border-bottom: 1px solid var(--line);
 }
-.access__list dt { width: 5em; flex-shrink: 0; color: var(--muted); font-weight: 700; font-size: 0.9rem; }
+.access__list dt { width: 6.5em; flex-shrink: 0; color: var(--muted); font-weight: 700; font-size: 0.9rem; }
+.access__list dd { line-height: 1.6; }
 .access__list a { color: var(--cta); font-weight: 700; }
 .access__media {
   display: flex;

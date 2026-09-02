@@ -14,22 +14,35 @@ Google広告 / Meta広告 / Instagram広告からの流入を「パーソナル�
 すべてのファイルパスは相対パス（`./`）で統一しており、GitHub Pagesのプロジェクトサイト
 （`https://<user>.github.io/<repo>/` のようなサブパス配信）でもそのまま動作します。
 
-## 公開前に必ず差し替えるもの
+## 店舗情報（確定・反映済み）
 
-コード内は `○○` やダミードメイン・ダミー電話番号などプレースホルダーのままです。
-**店舗名・住所・電話番号・LINE公式アカウントURL・Instagram URL・営業時間はまだ実データが
-届いていないため、以下はすべてダミーのままです。** 届き次第、最優先で反映します。
+以下は確定情報として全ページに反映済みです。
 
-| 項目 | 場所 | 現在の値 |
+| 項目 | 値 |
+|---|---|
+| 店舗名 | マッスルジム湘南店（英語表記: MUSCLE GYM SHONAN） |
+| 住所 | 〒251-0025 神奈川県藤沢市鵠沼石上1-5-21 やませビル鵠沼2F（藤沢駅南口から徒歩3分） |
+| ジム電話番号 | 0466-54-8588（`tel:0466548588`） |
+| PEACE接骨院・リラクゼーション電話番号 | 0466-28-4040（`tel:0466284040`） |
+| LINE公式アカウント | https://lin.ee/5dk5BNG |
+| Instagram | https://www.instagram.com/musclegym_shonan/ |
+| 公式サイト | https://musclegym-shonan.jp/（`canonical` / OGP / `robots.txt` / `sitemap.xml` のドメインとして採用） |
+| ジム営業時間 | 24時間エリア：24時間利用可能／スタッフ受付：平日10:00〜22:00・土曜10:00〜18:00（水・日休み） |
+| PEACE接骨院・リラクゼーション営業時間 | 月・火・木・金 10:00〜14:00／16:00〜22:00、土曜・祝日 10:00〜14:00／15:00〜18:00（水・日休み） |
+
+> **公式サイトのドメインについて**：`https://musclegym-shonan.jp/` を本LPの`canonical`/OGP/`sitemap.xml`のドメインとして採用しています。もしこのドメインが既存の別サイト（本LPとは別のコーポレートサイト等）を指しており、本LPの公開先が別ドメイン・別パスになる場合は、`canonical`/OGP/`robots.txt`/`sitemap.xml`の向き先を教えてください（誤ったcanonical指定はSEO上望ましくないため）。
+
+## 公開前に確認が必要なもの（未確定・意図的に未記載）
+
+推測で埋めていない項目です。分かり次第ご連絡いただければ反映します。
+
+| 項目 | 場所 | 現状 |
 |---|---|---|
-| LINE公式アカウントURL | `index.html` 内 `https://lin.ee/your-line-id`（全CTA共通、`grep -n "lin.ee" index.html`で一覧） | ダミー |
-| 電話番号 | `tel:0120000000` / 表示テキスト（header, sticky bar, access, footer, JSON-LD） | ダミー |
-| 住所 | JSON-LD (`index.html` head) と `access` セクション、footer | ダミー（○○表記） |
-| ドメイン | `<link rel="canonical">`, OGP `og:url`/`og:image`, `robots.txt`, `sitemap.xml` | `musclegym-shonan.example.com` |
-| Googleマップ埋め込み | `access__map iframe` の `src` | 藤沢駅の仮埋め込み。実店舗の座標に差し替え |
-| Instagram URL | footer, JSON-LD `sameAs` | ダミー |
-| `tokushoho.html` | 事業者名・運営責任者・メールアドレス等 | ダミー |
-| キャンペーン条件 | `campaign` / `pricing` セクション | 確定情報を反映済み（税込表記・併用可否・終了日・人数制限は未確認のため未記載） |
+| 運営会社の正式名称 | `tokushoho.html` 事業者名 | 未確認（`○○○○（未確認）`のまま） |
+| 運営責任者名 | `tokushoho.html` 運営責任者 | 未確認 |
+| 問い合わせ用メールアドレス | `tokushoho.html` メールアドレス、`privacy.html` | 未確認（`info@example.com（未確認）`のまま） |
+| Googleマップの座標精度 | `access__map iframe` の `src` | 住所文字列での検索埋め込み。正確なピン留めが必要な場合はGoogleマップの共有埋め込みコードをご提供ください |
+| キャンペーンの併用可否・終了日・人数制限・税込表記 | `campaign` / `pricing` セクション | 未確認のため一切記載していません |
 
 写真は実店舗の撮影データに差し替え済みです（Unsplash等のストック写真・AI生成画像は不使用）。
 
