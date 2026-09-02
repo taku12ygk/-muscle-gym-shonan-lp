@@ -26,7 +26,8 @@ Google広告 / Meta広告 / Instagram広告からの流入を「パーソナル�
 | PEACE接骨院・リラクゼーション電話番号 | 0466-28-4040（`tel:0466284040`） |
 | LINE公式アカウント | https://lin.ee/5dk5BNG |
 | Instagram | https://www.instagram.com/musclegym_shonan/ |
-| 公式サイト | https://musclegym-shonan.jp/（`canonical` / OGP / `robots.txt` / `sitemap.xml` のドメインとして採用） |
+| 本LPの公開URL | https://taku12ygk.github.io/-muscle-gym-shonan-lp/（`canonical` / OGP / JSON-LD `url` / `robots.txt` / `sitemap.xml` はこのURLを使用） |
+| 公式サイト（別ドメイン） | https://musclegym-shonan.jp/（footerの「公式サイト」リンク先、JSON-LD `sameAs` として参照。canonical等には使用しない） |
 | ジム営業時間 | 24時間エリア：24時間利用可能／スタッフ受付：平日10:00〜22:00・土曜10:00〜18:00（水・日休み） |
 | PEACE接骨院・リラクゼーション営業時間 | 月・火・木・金 10:00〜14:00／16:00〜22:00、土曜・祝日 10:00〜14:00／15:00〜18:00（水・日休み） |
 | 運営会社 | 株式会社同心会（`tokushoho.html` 事業者名） |
@@ -36,10 +37,12 @@ Google広告 / Meta広告 / Instagram広告からの流入を「パーソナル�
 現在の運営会社は株式会社同心会です。事業譲渡後にFifth Core株式会社へ変更予定とのことですが、
 **譲渡完了までは株式会社同心会のまま**とし、Fifth Core株式会社は一切記載していません。
 
-公式サイト `https://musclegym-shonan.jp/` は、`canonical`/OGP/`robots.txt`/`sitemap.xml`のドメイン、
-およびfooterの「公式サイト」リンク先として採用しています。GitHub Pagesの独自ドメイン設定（CNAME）は
-変更していません（このリポジトリに`CNAME`ファイルは存在せず、GitHub Pagesは引き続き公開・確認環境として
-機能します）。
+本LPは現在GitHub Pages（`https://taku12ygk.github.io/-muscle-gym-shonan-lp/`）で公開・確認しており、
+`canonical`/OGP/JSON-LD `url`/`robots.txt`/`sitemap.xml`はこのURLを採用しています。
+`https://musclegym-shonan.jp/` は別ドメインの公式サイトとして扱い、footerの「公式サイト」リンクと
+JSON-LD `sameAs` からのみ参照しています。GitHub Pagesの独自ドメイン設定（CNAME）は変更していません
+（このリポジトリに`CNAME`ファイルは存在しません）。将来、公式ドメインへ本LPを移行する際は、
+`canonical`/OGP/JSON-LD `url`/`robots.txt`/`sitemap.xml`を新しいURLに差し替えてください。
 
 ## 9月スタート応援キャンペーン（確定条件）
 
@@ -58,7 +61,6 @@ Google広告 / Meta広告 / Instagram広告からの流入を「パーソナル�
 | 項目 | 場所 | 現状 |
 |---|---|---|
 | プライバシーポリシーの制定日 | `privacy.html`（HTMLコメントに記載） | 未確認のため未記載 |
-| Googleマップの座標精度 | `access__map iframe` の `src` | 住所文字列での検索埋め込み。正確なピン留めが必要な場合はGoogleマップの共有埋め込みコードをご提供ください |
 
 写真は実店舗の撮影データに差し替え済みです（Unsplash等のストック写真・AI生成画像は不使用）。
 
@@ -97,8 +99,8 @@ Google広告 / Meta広告 / Instagram広告からの流入を「パーソナル�
 {
   event: "cta_click",
   cta_id: "line_hero" | "tel_header" | "line_campaign" | "line_flow" |
-          "line_pricing" | "tel_access" | "line_access" | "line_closing" |
-          "line_sticky" | "tel_sticky",
+          "line_pricing" | "tel_access" | "tel_access_peace" | "mail_access" |
+          "map_access" | "line_access" | "line_closing" | "line_sticky" | "tel_sticky",
   cta_label: "ボタンの表示テキスト",
   cta_href: "遷移先URL"
 }
@@ -117,6 +119,7 @@ LINE公式アカウント管理画面 or 計測用リダイレクトURLと組み
 - **パフォーマンス**：外部ライブラリ・Webフォント不使用。JSは依存ゼロで約2.5KB。画像は`srcset`/`sizes`/`loading="lazy"`/`fetchpriority`を適切に設定し、CLS防止のため`width`/`height`を全画像に指定。写真は圧縮済み（合計 約2.2MB / 21ファイル）。
 - **アクセシビリティ**：スキップリンク、フォーカスリング、装飾画像への`alt=""`、FAQはネイティブ`<details>`でJS非依存、コントラスト比はAA基準（本文4.5:1以上）で配色を設計。
 - **計測拡張性**：GTM/GA4/Meta Pixel/Clarity/Hotjarを後から追加できるよう、設置スロットとCTAのdata属性を用意済み。
+- **アクセスのフォールバック**：住所は`access__list`に常時テキスト表示（地図の読み込み可否に依存しない）。Googleマップの埋め込み（`google.com/maps?q=...&output=embed`）に加え、`maps.app.goo.gl`の短縮リンクで地図アプリを直接開ける「Googleマップで開く」ボタンを設置。地図コンテナは`aspect-ratio`と`max-width:100%`でレスポンシブ化し、モバイルで横スクロールが発生しないことを確認済み。
 
 ## ローカル確認
 
