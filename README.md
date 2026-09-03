@@ -124,6 +124,21 @@ LINE公式アカウント管理画面 or 計測用リダイレクトURLと組み
 - **計測拡張性**：GTM/GA4/Meta Pixel/Clarity/Hotjarを後から追加できるよう、設置スロットとCTAのdata属性を用意済み。
 - **アクセス欄の地図**：`google.com/maps?q=...&output=embed`形式のAPIキー不要な簡易iframe埋め込みは、環境によって読み込めず灰色のエラー表示になる不具合が実機で確認されたため使用していません。住所は`access__list`に常時テキスト表示し、地図の代わりに常に確実に表示される静的カード（`.access__map-card`）を設置。`maps.app.goo.gl`の短縮リンクで地図アプリを直接開ける「Googleマップで開く」ボタンを配置しています。実際の地図をページ内に埋め込みたい場合は、Googleマップの「地図を共有または埋め込む」→「地図を埋め込む」で発行される公式の`maps/embed?pb=...`形式のiframeコードをご提供いただければ差し替えます。
 
+## SEO・MEO自動化（第一段階）
+
+PRごとの自動チェックと、週次レポート・Google連携の土台を用意しています。
+
+- `.github/workflows/seo-check.yml` … PR作成・更新のたびに title/description/H1/canonical/画像alt/内部リンク切れ/robots.txt/sitemap.xmlを自動チェックし、結果をPRにコメントします。あわせてLighthouseによるページ速度・モバイル表示チェックも実行します。
+- `.github/workflows/weekly-report.yml` … 毎週月曜9:00（日本時間）にGA4・Search Consoleのデータを集計し、GitHub Issueとしてレポートを投稿します（Google連携未設定の間は安全にスキップされます）。
+- `scripts/seo_check.py` … 上記SEOチェックの本体（標準ライブラリのみ、追加インストール不要）。
+- `scripts/weekly_report/` … 週次レポート生成スクリプトと依存ライブラリ一覧。
+- `scripts/gbp_performance/` … Googleビジネスプロフィールのパフォーマンス取得の土台（申請・承認待ちのため未接続）。
+- `docs/measurement-plan.md` … LINE/電話/問い合わせ/予約/Googleマップの計測設計と二重計測防止のルール。
+- `docs/google-setup-guide.md` … Search Console/GA4/GTM/週次レポート用サービスアカウントの設定手順（初心者向け・日本語）。
+
+いずれもデザイン・文章・画像は変更していません。Googleアカウントでの設定作業は
+`docs/google-setup-guide.md` の手順に沿って、当社アカウントで行ってください。
+
 ## ローカル確認
 
 ```bash
