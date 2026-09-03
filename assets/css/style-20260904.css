@@ -175,6 +175,11 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
   object-fit: cover;
   object-position: center 30%;
 }
+/* スマホは画面が縦長なため、中央基準だと人物が画面外に切れてしまう。
+   顔・上半身が写っている右寄りの位置を基準にする（PC版は変更しない） */
+@media (max-width: 640px) {
+  .hero__img { object-position: 76% 20%; }
+}
 .hero__scrim {
   position: absolute;
   inset: 0;
@@ -356,6 +361,7 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
   color: var(--accent);
   font-weight: 800;
 }
+.campaign-card__note { margin-top: 1rem; font-size: 0.8rem; color: var(--muted-invert); }
 
 /* LINE限定特典：独立した目立つバナー */
 .campaign__perk-banner {
@@ -477,6 +483,7 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 .pricing__summary-label { font-weight: 700; color: var(--muted); font-size: 0.9rem; }
 .pricing__summary-price { margin-top: 0.5rem; font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem); font-weight: 800; }
 .pricing__summary-price span { display: block; margin-top: 0.3rem; font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+.pricing__summary-note { margin-top: 0.5rem; font-size: 0.8rem; color: var(--muted); }
 .pricing__footer { text-align: center; }
 
 /* ---------- FAQ ---------- */
