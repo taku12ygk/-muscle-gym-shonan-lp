@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.musclegym-shonan.example.com/sitemap.xml
+Sitemap: https://taku12ygk.github.io/-muscle-gym-shonan-lp/sitemap.xml
