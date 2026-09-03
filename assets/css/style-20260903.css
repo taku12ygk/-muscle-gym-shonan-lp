@@ -549,9 +549,24 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 @media (max-width: 640px) {
   .access__media img { max-height: 280px; }
 }
-.access__map { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; background: var(--line); max-width: 100%; }
-.access__map iframe { display: block; width: 100%; height: 100%; border: 0; }
-.access__map-link { align-self: flex-start; }
+/* 地図：外部iframe埋め込みは環境によって読み込めない場合があるため使用せず、
+   常に確実に表示される静的カード＋外部マップアプリへのリンクにする */
+.access__map-card {
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  border-radius: var(--radius);
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.access__map-icon { font-size: 2rem; line-height: 1; }
+.access__map-text { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
 /* ---------- Closing ---------- */
 .closing {
@@ -570,6 +585,10 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--night); color: var(--muted-invert); padding-block: 3rem; }
+/* モバイルは画面下部に固定CTAバーが重なるため、フッター下部に逃げ余白を確保 */
+@media (max-width: 899px) {
+  .site-footer { padding-bottom: calc(3rem + 96px + env(safe-area-inset-bottom)); }
+}
 .site-footer__inner { text-align: center; }
 .site-footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.4rem; margin: 1.4rem 0; }
 .site-footer__links a:hover { color: #fff; }
