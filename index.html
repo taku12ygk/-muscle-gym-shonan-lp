@@ -21,7 +21,7 @@
 
 <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
 
-<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/style-20260903.css">
 <script>document.documentElement.classList.add('js');</script>
 
 <!-- ============================================================
@@ -148,54 +148,67 @@
   </section>
 
   <!-- ============================================================
-       3. 9月スタートキャンペーン
+       3. 9月限定キャンペーン
   ============================================================= -->
-  <section class="campaign" data-reveal="up" aria-labelledby="campaign-heading">
+  <section class="campaign" id="campaign" data-reveal="up" aria-labelledby="campaign-heading">
     <div class="wrap">
       <p class="eyebrow eyebrow--invert">SEPTEMBER CAMPAIGN</p>
-      <h2 id="campaign-heading" class="section-title section-title--invert">9月スタート応援キャンペーン</h2>
+      <h2 id="campaign-heading" class="section-title section-title--invert">9月限定キャンペーン</h2>
 
-      <p class="campaign__period">受付期間：〜2026年9月30日（人数制限なし）</p>
-
-      <ul class="campaign__common">
-        <li>入会金 <strong>0円</strong>（税込）</li>
-        <li>事務手数料 <strong>0円</strong>（税込）</li>
-        <li>無料体験実施中</li>
-      </ul>
+      <div class="campaign__stats">
+        <div class="campaign__stat">
+          <p class="campaign__stat-num">0<small>円</small></p>
+          <p class="campaign__stat-label">入会金</p>
+        </div>
+        <div class="campaign__stat">
+          <p class="campaign__stat-num">0<small>円</small></p>
+          <p class="campaign__stat-label">事務手数料</p>
+        </div>
+        <div class="campaign__stat">
+          <p class="campaign__stat-num campaign__stat-num--sm">無料</p>
+          <p class="campaign__stat-label">体験受付中</p>
+        </div>
+      </div>
 
       <div class="campaign__grid">
         <article class="campaign-card">
           <p class="campaign-card__label">24時間コース</p>
-          <p class="campaign-card__price">月額2,980円<span>（税込）／最初の2ヶ月間</span></p>
+          <p class="campaign-card__price-tag">月額</p>
+          <p class="campaign-card__price"><span class="campaign-card__price-num">2,980</span><span class="campaign-card__price-yen">円</span></p>
+          <p class="campaign-card__sub">最初の2ヶ月間</p>
           <ul class="campaign-card__list">
-            <li>3ヶ月目以降：通常料金</li>
             <li>6ヶ月継続契約</li>
             <li>接骨院の選べる2回券付き</li>
+            <li>3ヶ月目以降は通常料金</li>
           </ul>
-          <p class="campaign-card__note">※3ヶ月目以降は通常料金へ移行します。最低在籍期間等の詳細はスタッフよりご案内します。</p>
         </article>
 
         <article class="campaign-card">
           <p class="campaign-card__label">パーソナルコース</p>
-          <p class="campaign-card__price">セット料金 0円<span>（税込）／最初の2ヶ月間</span></p>
+          <p class="campaign-card__price-tag">セット料金</p>
+          <p class="campaign-card__price"><span class="campaign-card__price-num">0</span><span class="campaign-card__price-yen">円</span></p>
+          <p class="campaign-card__sub">最初の2ヶ月間</p>
           <ul class="campaign-card__list">
+            <li>パーソナル＋24時間</li>
+            <li>パーソナル＋接骨院</li>
             <li>パーソナル料金だけで利用可能</li>
-            <li>「パーソナル＋24時間」から選択可能</li>
-            <li>「パーソナル＋接骨院」から選択可能</li>
           </ul>
         </article>
       </div>
 
-      <p class="campaign__line-perk">公式LINE限定特典：公式LINEからのお問い合わせで、<strong>初月月会費半額</strong><br><span class="campaign__line-perk-note">（税込）※他の特典との併用不可</span></p>
+      <div class="campaign__perk-banner">
+        <p class="campaign__perk-banner-label">公式LINE限定特典</p>
+        <p class="campaign__perk-banner-main">初月月会費<strong>半額</strong></p>
+      </div>
 
-      <p class="campaign__disclaimer">※本キャンペーンは2026年9月30日までの受付です。他のキャンペーン・特典との併用はできません。</p>
+      <p class="campaign__disclaimer">※価格はすべて税込表記です。受付期間：〜2026年9月30日（人数制限なし）。他のキャンペーン・特典との併用はできません。24時間コースは3ヶ月目以降、通常料金へ移行します（6ヶ月継続契約。最低在籍期間等の詳細はスタッフよりご案内します）。</p>
     </div>
   </section>
 
   <!-- キャンペーン直後のCTA -->
   <section class="cta-strip" data-reveal="fade">
     <div class="wrap cta-strip__inner">
-      <p>9月スタートキャンペーンは、LINEから簡単にお申し込みいただけます。</p>
+      <p>9月限定キャンペーンは、LINEから簡単にお申し込みいただけます。</p>
       <a class="btn btn--cta" data-cta="line_campaign" href="https://lin.ee/5dk5BNG" target="_blank" rel="noopener">LINEで無料体験を予約する</a>
     </div>
   </section>
@@ -333,44 +346,25 @@
   </section>
 
   <!-- ============================================================
-       9. 料金・キャンペーン条件
+       9. 料金について（要約・キャンペーンへの案内）
   ============================================================= -->
   <section class="pricing" data-reveal="up">
     <div class="wrap">
       <p class="eyebrow">PRICING</p>
-      <h2 class="section-title">料金・キャンペーン条件</h2>
-      <p class="pricing__lead">無理な勧誘・強制的な入会は一切ありません。</p>
-      <p class="campaign__period campaign__period--light">受付期間：〜2026年9月30日（人数制限なし）</p>
-      <ul class="campaign__common campaign__common--light">
-        <li>入会金 <strong>0円</strong>（税込）</li>
-        <li>事務手数料 <strong>0円</strong>（税込）</li>
-        <li>無料体験実施中</li>
-      </ul>
+      <h2 class="section-title">料金について</h2>
+      <p class="pricing__lead">無理な勧誘・強制的な入会は一切ありません。詳しい条件は<a href="#campaign">9月限定キャンペーン</a>をご確認ください。</p>
     </div>
-    <div class="wrap pricing__grid">
-      <article class="pricing__card">
-        <p class="pricing__label">24時間コース</p>
-        <p class="pricing__price">月額2,980円<span>（税込）／最初の2ヶ月間</span></p>
-        <ul class="pricing__list">
-          <li>3ヶ月目以降：通常料金</li>
-          <li>6ヶ月継続契約</li>
-          <li>接骨院の選べる2回券付き</li>
-        </ul>
-        <p class="pricing__note">※3ヶ月目以降は通常料金へ移行します。最低在籍期間等の詳細はスタッフよりご案内します。</p>
-      </article>
-      <article class="pricing__card">
-        <p class="pricing__label">パーソナルコース</p>
-        <p class="pricing__price">セット料金 0円<span>（税込）／最初の2ヶ月間</span></p>
-        <ul class="pricing__list">
-          <li>パーソナル料金だけで利用可能</li>
-          <li>「パーソナル＋24時間」から選択可能</li>
-          <li>「パーソナル＋接骨院」から選択可能</li>
-        </ul>
-      </article>
+    <div class="wrap pricing__summary">
+      <div class="pricing__summary-item">
+        <p class="pricing__summary-label">24時間コース</p>
+        <p class="pricing__summary-price">月額2,980円<span>〜／最初の2ヶ月・税込</span></p>
+      </div>
+      <div class="pricing__summary-item">
+        <p class="pricing__summary-label">パーソナルコース</p>
+        <p class="pricing__summary-price">セット料金0円<span>／最初の2ヶ月・税込</span></p>
+      </div>
     </div>
     <div class="wrap pricing__footer">
-      <p class="pricing__perk">公式LINE限定特典：公式LINEからのお問い合わせで、<strong>初月月会費半額</strong><br><span class="campaign__line-perk-note">（税込）※他の特典との併用不可</span></p>
-      <p class="pricing__disclaimer">※本キャンペーンは2026年9月30日までの受付です。他のキャンペーン・特典との併用はできません。</p>
       <a class="btn btn--lg btn--cta" data-cta="line_pricing" href="https://lin.ee/5dk5BNG" target="_blank" rel="noopener">LINEで無料体験を予約する</a>
     </div>
   </section>
@@ -513,7 +507,7 @@
   <a class="btn btn--ghost" data-cta="tel_sticky" href="tel:0466548588">電話で相談</a>
 </div>
 
-<script src="./assets/js/main.js" defer></script>
+<script src="./assets/js/main-20260903.js" defer></script>
 
 <!-- ============================================================
      計測タグ設置スロット（Body末尾）
