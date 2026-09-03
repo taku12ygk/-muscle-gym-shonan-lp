@@ -275,7 +275,7 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 .feature-card p { color: var(--muted); }
 
 /* ---------- Campaign (9月限定キャンペーン) ---------- */
-.campaign { background: var(--night); color: #fff; padding-block: var(--section-y); }
+.campaign { background: var(--night); color: #fff; padding-block: var(--section-y); scroll-margin-top: 90px; }
 .campaign .wrap > .eyebrow, .campaign .wrap > .section-title { text-align: center; }
 .campaign .section-title { margin-inline: auto; margin-bottom: clamp(1.8rem, 3vw, 2.4rem); }
 
