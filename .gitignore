@@ -1,0 +1,6 @@
+# SEO自動チェック・週次レポートを手元で試したときに生成される一時ファイル
+# （GitHub Actions上でも一時生成されますが、コミットはしません）
+seo_report.md
+weekly_report.md
+weekly_report_status.txt
+GITHUB_STEP_SUMMARY_LOCAL.md
