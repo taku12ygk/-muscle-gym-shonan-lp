@@ -8,7 +8,7 @@
 ```
 lp/winter/
 ├── index.html                          … LP本体
-├── assets/css/winter-20261026e.css     … スタイル一式（このLP専用、既存CSSと独立）
+├── assets/css/winter-20261026f.css     … スタイル一式（このLP専用、既存CSSと独立）
 ├── assets/js/winter-20261026.js        … スクロール演出・固定CTAバー・計測イベント送出
 ├── assets/img/favicon.svg              … favicon（既存LPと共通デザイン）
 ├── assets/img/photos/                  … 実店舗の撮影写真（既存LPの使用許諾済み写真から、本LPで使うものだけを複製）
@@ -33,7 +33,7 @@ GitHub Pagesのサブパスでも、業者サーバーの任意のサブディ�
 **本番公開時に行う作業**（公開URLが決まってから）
 1. `index.html` の `<meta name="robots" content="noindex,nofollow">` を、検索に載せる場合は `index,follow` に変更
 2. `<head>` 内に `canonical`・`og:url`・`og:image`（公開URLを使った絶対URL）を追加
-3. フッターの「確認用プレビューです」の一文（`site-footer__preview-note`）を削除
+3. ページ上部の「確認用ページ｜公開前の内容です」（`preview-banner`）と、フッターの確認用の一文（`site-footer__preview-note`）を削除
 4. フッターのプライバシーポリシー・特定商取引法の表記は、現在は既存LP（GitHub Pages）のページへ絶対URLでリンクしています。
    業者サーバー側に別のページを用意する場合は、リンク先を差し替えてください
 

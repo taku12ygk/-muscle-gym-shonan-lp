@@ -509,3 +509,9 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 
 /* 各セクションへのスクロール時、固定ヘッダーに見出しが隠れないように */
 main section { scroll-margin-top: 76px; }
+
+/* ---------- 確認用バナー（本番公開時に削除） ---------- */
+.preview-banner {
+  margin: 0; background: var(--gold-bright); color: var(--navy-deep);
+  font-size: 0.82rem; font-weight: 700; text-align: center; padding: 0.4rem 1rem;
+}
