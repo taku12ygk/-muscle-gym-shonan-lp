@@ -10,6 +10,7 @@ Google広告 / Meta広告 / Instagram広告からの流入を「パーソナル�
 - `assets/img/photos/` … 実店舗の撮影写真（Web用に圧縮済み、srcset用に複数サイズを書き出し）
 - `privacy.html` / `tokushoho.html` … プライバシーポリシー／特定商取引法に基づく表記（雛形）
 - `robots.txt` / `sitemap.xml` … SEO用
+- `lp/winter/` … 年末年始キャンペーン専用LP（既存LPとは独立したCSS/JS/写真を使用。詳細は`lp/winter/README.md`参照）
 
 すべてのファイルパスは相対パス（`./`）で統一しており、GitHub Pagesのプロジェクトサイト
 （`https://<user>.github.io/<repo>/` のようなサブパス配信）でもそのまま動作します。
