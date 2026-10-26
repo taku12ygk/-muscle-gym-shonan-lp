@@ -257,6 +257,14 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
   border-radius: 999px; padding: 0.8em 1.4em; display: inline-flex; gap: 0.5em; align-items: center;
 }
 .triple0__continue-wrap { text-align: center; margin-top: 1.4rem; }
+.triple0__stat-sub { margin-top: 0.2em; font-size: 0.75rem; font-weight: 700; color: var(--gold-bright); }
+.triple0__continue-note { margin: 0.8rem auto 0; max-width: 34em; font-size: 0.88rem; color: var(--muted-invert); }
+.triple0-card__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem; margin-bottom: 1.1em; }
+.triple0-card__head .triple0-card__label { margin-bottom: 0; }
+.triple0-card__limit {
+  font-size: 0.85rem; font-weight: 800; color: var(--navy-deep);
+  background: var(--gold-bright); padding: 0.3em 0.9em; border-radius: 999px;
+}
 
 .triple0__grid {
   margin-top: 2.6rem; display: grid; gap: 1.4rem;
@@ -389,6 +397,7 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
   font-size: 0.92rem; font-weight: 800; color: var(--gold-bright);
   background: var(--navy); padding: 0.5em 1.1em; border-radius: 999px;
 }
+.premium-pricing__perk--limit { background: var(--gold-deep); color: #fff; }
 .premium-pricing__exclude { margin-top: 0.8rem; font-size: 0.9rem; font-weight: 700; color: var(--ink); }
 .premium-pricing__note { margin-top: 1.6rem; font-size: 0.82rem; color: var(--muted); max-width: 70ch; }
 .premium-pricing__note strong { color: var(--ink); }
