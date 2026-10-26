@@ -343,13 +343,20 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 }
 .premium-plan__name { font-size: 1.05rem; font-weight: 800; }
 .premium-plan__meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.3em; }
-.premium-plan__regular { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); text-decoration: line-through; }
+.premium-plan__regular { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
+.premium-plan__tax { font-size: 0.78rem; font-weight: 700; color: var(--muted); }
 .premium-plan__price { margin-top: 0.2em; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); font-weight: 800; color: var(--navy); }
 .premium-plan__price small { font-size: 0.5em; font-weight: 700; margin-left: 0.1em; }
 .premium-plan__off {
   margin-top: 0.7em; display: inline-block; font-size: 0.8rem; font-weight: 700;
   color: var(--gold-deep); background: rgba(138,106,31,0.08); border-radius: 999px; padding: 0.3em 0.9em;
 }
+.premium-pricing__perks { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.premium-pricing__perk {
+  font-size: 0.92rem; font-weight: 800; color: var(--gold-bright);
+  background: var(--navy); padding: 0.5em 1.1em; border-radius: 999px;
+}
+.premium-pricing__exclude { margin-top: 0.8rem; font-size: 0.9rem; font-weight: 700; color: var(--ink); }
 .premium-pricing__note { margin-top: 1.6rem; font-size: 0.82rem; color: var(--muted); max-width: 70ch; }
 .premium-pricing__note strong { color: var(--ink); }
 
