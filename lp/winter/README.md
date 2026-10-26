@@ -8,7 +8,7 @@
 ```
 lp/winter/
 ├── index.html                          … LP本体
-├── assets/css/winter-20261026c.css     … スタイル一式（このLP専用、既存CSSと独立）
+├── assets/css/winter-20261026d.css     … スタイル一式（このLP専用、既存CSSと独立）
 ├── assets/js/winter-20261026.js        … スクロール演出・固定CTAバー・計測イベント送出
 ├── assets/img/favicon.svg              … favicon（既存LPと共通デザイン）
 ├── assets/img/photos/                  … 実店舗の撮影写真（既存LPの使用許諾済み写真から、本LPで使うものだけを複製）
