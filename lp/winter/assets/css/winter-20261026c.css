@@ -140,7 +140,7 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; padding-block: 0.9rem; }
 .site-header__brand { display: flex; align-items: center; }
 .logo { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--navy); }
-.logo em { font-style: normal; color: var(--gold-deep); }
+.logo em { font-style: normal; color: var(--gold-deep); margin-left: 0.35em; white-space: nowrap; }
 .site-header__period {
   display: none;
 }
@@ -304,7 +304,7 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 .premium__summary { color: var(--muted-invert); max-width: 56ch; font-size: var(--fs-lead); }
 
 .premium__services {
-  margin-top: 2rem; display: grid; gap: 1.1rem;
+  display: grid; gap: 1.1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .premium-service {
@@ -459,7 +459,9 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 }
 
 /* ---------- Scroll reveal ---------- */
-[data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+/* JSが動かない環境でも本文が消えないよう、非表示にするのはJS有効時（.js）のみ */
+.js [data-reveal] { opacity: 0; transform: translateY(14px); }
+[data-reveal] { transition: opacity 0.6s ease, transform 0.6s ease; }
 [data-reveal].in-view { opacity: 1; transform: translateY(0); }
 .site-header[data-reveal] { opacity: 1; transform: none; transition: none; }
 
