@@ -8,7 +8,7 @@
 ```
 lp/winter/
 ├── index.html                          … LP本体
-├── assets/css/winter-20261026f.css     … スタイル一式（このLP専用、既存CSSと独立）
+├── assets/css/winter-20261027.css     … スタイル一式（このLP専用、既存CSSと独立）
 ├── assets/js/winter-20261026.js        … スクロール演出・固定CTAバー・計測イベント送出
 ├── assets/img/favicon.svg              … favicon（既存LPと共通デザイン）
 ├── assets/img/photos/                  … 実店舗の撮影写真（既存LPの使用許諾済み写真から、本LPで使うものだけを複製）
@@ -63,6 +63,7 @@ LINEのリンク先（`https://lin.ee/5dk5BNG`）自体は既存LPと同じも�
 | `tel_access_peace_winter` | 電話ボタン（PEACE接骨院） |
 | `mail_access_winter` | メールボタン |
 | `map_access_winter` | Googleマップボタン |
+| `anchor_premium_teaser` | ファーストビュー直下のプレミアム案内リンク（ページ内のプレミアム料金表へ移動。LINE・電話のクリックとは別扱い） |
 
 **注意**：LINEボタンのクリックは「導線クリック」の計測であり、「予約完了」ではありません。
 既存LPの`docs/measurement-plan.md`と同じ考え方です。
