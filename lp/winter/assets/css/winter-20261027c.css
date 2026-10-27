@@ -542,3 +542,15 @@ main section { scroll-margin-top: 76px; }
 /* 語句単位の折り返し（.nw）を活かすため、バッジはflexではなくinline-blockで表示 */
 .triple0__continue { display: inline-block; max-width: 100%; }
 .cta-strip .cta-note { font-weight: 400; }
+
+/* ---------- ABOUT：24時間ジムの目安人数・注記 ---------- */
+.feature-card .feature-card__stat { margin-top: 0.8em; color: var(--ink); font-weight: 700; }
+.feature-card .feature-card__note { margin-top: 0.3em; font-size: 0.8rem; line-height: 1.6; }
+
+/* 固定ボタン：画面幅に収め、文字を切らさない（狭い画面ではLINEボタンを2行に） */
+@media (max-width: 899px) {
+  .sticky-cta .btn { min-width: 0; padding: 0.8em 0.7em; white-space: normal; line-height: 1.3; text-align: center; }
+  .sticky-cta .btn--gold { flex: 1.6 1 0; }
+  .sticky-cta .btn--ghost { flex: 1 1 0; }
+}
+.btn__label { display: block; text-align: center; }
