@@ -87,7 +87,8 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
 }
 .eyebrow--invert { color: var(--gold-bright); }
 
-.section-title { font-size: var(--fs-h2); max-width: 20ch; }
+/* 和文1文字≒1em。ch指定だと全角文字が約11字で折り返し、Safariで語の途中改行が起きるためemで指定 */
+.section-title { font-size: var(--fs-h2); max-width: 22em; }
 .section-title--invert { color: #fff; }
 .section-title--center { max-width: none; text-align: center; margin-inline: auto; }
 
@@ -338,19 +339,23 @@ h1, h2, h3 { line-height: 1.35; font-weight: 800; letter-spacing: -0.01em; }
   padding: clamp(1.6rem, 1.3rem + 1.5vw, 3rem); margin-top: 2rem;
 }
 .premium__summary { color: var(--muted-invert); max-width: 56ch; font-size: var(--fs-lead); }
+/* 5枚のカードは、PCで3枚＋2枚（下段中央寄せ）、タブレットで2枚ずつ、スマホで1列 */
+.premium__services { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.1rem; }
+.premium-service {
+  display: flex; gap: 0.9rem; padding: 1.2rem; border-radius: calc(var(--radius) - 4px);
+  background: rgba(255,255,255,0.03); border: 1px solid var(--line-invert);
+  flex: 0 1 100%;
+}
+@media (min-width: 641px) {
+  .premium-service { flex-basis: calc((100% - 1.1rem) / 2); }
+}
+@media (min-width: 900px) {
+  .premium-service { flex-basis: calc((100% - 2.2rem) / 3); padding: 1.4rem; }
+}
 /* スマホは外枠を外し、カード本文の横幅を確保 */
 @media (max-width: 640px) {
   .premium__frame { border: none; padding: 0; margin-top: 1.6rem; }
   .premium-service { padding: 1.1rem; }
-}
-
-.premium__services {
-  display: grid; gap: 1.1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.premium-service {
-  display: flex; gap: 0.9rem; padding: 1.2rem; border-radius: calc(var(--radius) - 4px);
-  background: rgba(255,255,255,0.03); border: 1px solid var(--line-invert);
 }
 .premium-service__icon {
   flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%;
@@ -515,3 +520,25 @@ main section { scroll-margin-top: 76px; }
   margin: 0; background: var(--gold-bright); color: var(--navy-deep);
   font-size: 0.82rem; font-weight: 700; text-align: center; padding: 0.4rem 1rem;
 }
+
+/* ---------- プレミアムへの控えめな案内（ファーストビュー直下） ---------- */
+.premium-teaser { background: var(--paper-warm); border-bottom: 1px solid var(--line); padding-block: 0.9rem; text-align: center; }
+.premium-teaser__link { font-size: 0.95rem; font-weight: 800; color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 4px; }
+.premium-teaser__link:hover { text-decoration-color: var(--gold-deep); }
+.premium-teaser__arrow { margin-left: 0.4em; color: var(--gold-deep); }
+.premium-teaser__note { margin-top: 0.3rem; font-size: 0.78rem; color: var(--muted); }
+
+/* ---------- 6ヶ月継続の説明・ボタン付近の注記・予約の選択肢 ---------- */
+.triple0__continue-note + .triple0__continue-note { margin-top: 0.4rem; }
+.triple0__continue-note--strong { color: #fff; font-weight: 700; }
+.cta-strip__action { display: flex; flex-direction: column; gap: 0.5rem; max-width: 26em; }
+.cta-note { margin-top: 0.6rem; font-size: 0.8rem; line-height: 1.6; color: var(--muted); }
+.cta-strip__action .cta-note { margin-top: 0; }
+.cta-note--invert { color: var(--muted-invert); }
+.flow__cta .cta-note, .closing__content .cta-note { max-width: 30em; margin-inline: auto; }
+.flow__options { margin-top: 0.6em; display: grid; gap: 0.3em; }
+.flow__options li { position: relative; padding-left: 1.1em; color: var(--ink); font-weight: 700; font-size: 0.95rem; }
+.flow__options li::before { content: "・"; position: absolute; left: 0; color: var(--gold-deep); }
+/* 語句単位の折り返し（.nw）を活かすため、バッジはflexではなくinline-blockで表示 */
+.triple0__continue { display: inline-block; max-width: 100%; }
+.cta-strip .cta-note { font-weight: 400; }
