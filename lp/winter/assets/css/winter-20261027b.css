@@ -527,3 +527,18 @@ main section { scroll-margin-top: 76px; }
 .premium-teaser__link:hover { text-decoration-color: var(--gold-deep); }
 .premium-teaser__arrow { margin-left: 0.4em; color: var(--gold-deep); }
 .premium-teaser__note { margin-top: 0.3rem; font-size: 0.78rem; color: var(--muted); }
+
+/* ---------- 6ヶ月継続の説明・ボタン付近の注記・予約の選択肢 ---------- */
+.triple0__continue-note + .triple0__continue-note { margin-top: 0.4rem; }
+.triple0__continue-note--strong { color: #fff; font-weight: 700; }
+.cta-strip__action { display: flex; flex-direction: column; gap: 0.5rem; max-width: 26em; }
+.cta-note { margin-top: 0.6rem; font-size: 0.8rem; line-height: 1.6; color: var(--muted); }
+.cta-strip__action .cta-note { margin-top: 0; }
+.cta-note--invert { color: var(--muted-invert); }
+.flow__cta .cta-note, .closing__content .cta-note { max-width: 30em; margin-inline: auto; }
+.flow__options { margin-top: 0.6em; display: grid; gap: 0.3em; }
+.flow__options li { position: relative; padding-left: 1.1em; color: var(--ink); font-weight: 700; font-size: 0.95rem; }
+.flow__options li::before { content: "・"; position: absolute; left: 0; color: var(--gold-deep); }
+/* 語句単位の折り返し（.nw）を活かすため、バッジはflexではなくinline-blockで表示 */
+.triple0__continue { display: inline-block; max-width: 100%; }
+.cta-strip .cta-note { font-weight: 400; }
